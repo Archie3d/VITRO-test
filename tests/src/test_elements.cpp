@@ -43,14 +43,17 @@ TEST(elements, layout_style)
     context.getStylesheet().populateFromString(R"(
         hbox {
             flex-direction: row;
+            flex-grow: 1;
         }
 
         a {
             width: 25%;
+            flex-grow: 1;
         }
 
         b {
             width: 75%;
+            flex-grow: 1;
         }
     )");
 
@@ -71,18 +74,39 @@ TEST(elements, layout_style)
     ASSERT_EQ(root->getElementById("id_a"), dynamic_cast<vitro::Element*>(aPtr));
     ASSERT_EQ(root->getElementById("id_b"), dynamic_cast<vitro::Element*>(bPtr));
 
+    // Capture all the style properties of all the elements
+    root->updateStyleProperties();
+    aPtr->updateStyleProperties();
+    bPtr->updateStyleProperties();
+
+    ASSERT_EQ(aPtr->getStyleProperty("width").toString(), "25%");
+    ASSERT_EQ(bPtr->getStyleProperty("width").toString(), "75%");
+
+    // Apply style properties to the layout
+    root->updateLayout();
+
     const float width{ 100.0f };
     const float height{ 100.0f };
 
-    root->updateLayout();
-    /*
+    // Recalculate elements layout boxes
     root->recalculateLayout(width, height);
 
     auto rootBounds{ root->getLayoutElementBounds() };
     auto aBounds{ aPtr->getLayoutElementBounds() };
     auto bBounds{ bPtr->getLayoutElementBounds() };
 
+    ASSERT_EQ(rootBounds.getX(), 0.0f);
+    ASSERT_EQ(rootBounds.getY(), 0.0f);
     ASSERT_EQ(rootBounds.getWidth(), width);
     ASSERT_EQ(rootBounds.getHeight(), height);
-    */
+
+    ASSERT_EQ(aBounds.getX(), 0.0f);
+    ASSERT_EQ(aBounds.getY(), 0.0f);
+    ASSERT_EQ(aBounds.getWidth(), width * 0.25f);
+    ASSERT_EQ(aBounds.getHeight(), height);
+
+    ASSERT_EQ(bBounds.getX(), width * 0.25f);
+    ASSERT_EQ(bBounds.getY(), 0.0f);
+    ASSERT_EQ(bBounds.getWidth(), width * 0.75f);
+    ASSERT_EQ(bBounds.getHeight(), height);
 }
