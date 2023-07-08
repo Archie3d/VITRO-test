@@ -30,7 +30,10 @@ void MainComponent::reload()
         return loader.loadText(location);
     };
 
-    context.getStylesheet().populateFromString(loader.loadText("style.css"), styleImporter);
+    auto& stylesheet{ context.getStylesheet() };
+
+    stylesheet.clear();
+    stylesheet.populateFromString(loader.loadText("style.css"), styleImporter);
 
     String script{ loader.loadText("script.js") };
 
@@ -39,6 +42,7 @@ void MainComponent::reload()
         context.dumpError();
     }
 
+    // This will remove all current children in the view
     view->populateFromXmlResource("index.xml");
 }
 
