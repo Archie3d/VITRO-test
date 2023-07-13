@@ -6,7 +6,7 @@
 
 MainComponent::MainComponent()
     : context{},
-      view{ std::make_shared<vitro::View>(context) }
+      view{ std::dynamic_pointer_cast<vitro::View>(context.getElementsFactory().createElement(vitro::View::tag)) }
 {
     context.getLoader().setLocalDirectory(File::getSpecialLocation(File::currentApplicationFile).getParentDirectory());
 
