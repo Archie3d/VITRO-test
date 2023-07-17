@@ -19,7 +19,7 @@ MainComponent::~MainComponent() = default;
 
 void MainComponent::reload()
 {
-    viewContainer.loadFromResource("index.xml", "style.css", "script.js");
+    viewContainer.loadFromResource("view.xml", "style.css", "script.js");
 
     // Need to call resized so that the new view gets adjusted to the container
     resized();
