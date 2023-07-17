@@ -6,52 +6,21 @@
 
 MainComponent::MainComponent()
 {
+    viewContainer.setLocalDirectory(File::getSpecialLocation(File::currentApplicationFile).getParentDirectory());
+    addAndMakeVisible(viewContainer);
+
     reload();
     triggerAsyncUpdate();
 
     setSize (600, 400);
 }
 
-MainComponent::~MainComponent()
-{
-    // The view must be deleted before the context, otherwise JS context will leak.
-    view.reset();
-}
+MainComponent::~MainComponent() = default;
 
 void MainComponent::reload()
 {
-    // Delete the current view
-    view.reset();
-    context.reset();
+    viewContainer.loadFromResource("index.xml", "style.css", "script.js");
 
-    context = std::make_unique<vitro::Context>();
-
-    auto& loader{ context->getLoader() };
-    loader.setLocalDirectory(File::getSpecialLocation(File::currentApplicationFile).getParentDirectory());
-
-    auto styleImporter = [&](const String& location) -> String {
-        return loader.loadText(location);
-    };
-
-    auto& stylesheet{ context->getStylesheet() };
-
-    stylesheet.clear();
-    stylesheet.populateFromString(loader.loadText("style.css"), styleImporter);
-
-    // Create a new view before evaluating the script
-    view = std::dynamic_pointer_cast<vitro::View>(context->getElementsFactory().createElement(vitro::View::tag));
-    addAndMakeVisible(view.get());
-
-    String script{ loader.loadText("script.js") };
-
-    if (script.isNotEmpty()) {
-        context->eval(script, "script.js");
-        context->dumpError();
-    }
-
-    // This will remove all current children in the view
-    view->populateFromXmlResource("index.xml");
-    
     // Need to call resized so that the new view gets adjusted to the container
     resized();
 }
@@ -63,7 +32,7 @@ void MainComponent::paint (juce::Graphics& g)
 
 void MainComponent::resized()
 {
-    view->setBounds(getLocalBounds());
+    viewContainer.setBounds(getLocalBounds());
 }
 
 void MainComponent::handleAsyncUpdate()

@@ -28,8 +28,7 @@ private:
     // juce::KeyListener
     bool keyPressed(const juce::KeyPress& key, juce::Component* source) override;
 
-    std::unique_ptr<vitro::Context> context{};
-    std::shared_ptr<vitro::View> view{};
+    vitro::ViewContainer viewContainer{};
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(MainComponent)
 };

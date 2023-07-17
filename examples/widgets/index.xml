@@ -1,0 +1,48 @@
+<View>
+    <ScrollArea>
+        <Panel class="scroll">
+            <Label class="title" text="Labels" />
+            <Label text="Simple label" />
+            <Label text="Colored label" style="color: cyan;" />
+            <Label class="underline_on_hover" text="Decorated label" />
+
+            <Label class="title" text="Buttons" />
+            <TextButton text="Text button" />
+            <TextButton text="Disabled button" enabled="false" />
+            <TextButton text="Colored button" style="background-color: #1F051F;" />
+            <ToggleButton text="Toggle button" toggle="true" />
+
+            <Label class="title" text="Sliders" />
+            <Slider class="horizontal" decimals="2" />
+            <Slider class="horizontal colored" />
+            <Slider class="horizontal-bar" value="1.0" decimals="2" />
+            <Slider class="rotary" min="-1.0" max="1.0" decimals="2" />
+
+            <Label class="title" text="Text Editor" />
+            <TextEditor text="Single line text editor" />
+            <TextEditor class="multiline" text="Multiline text editor" />
+
+            <Label class="title" text="Panel" />
+            <HBox>
+                <Panel style="background-color: green;" />
+                <Panel style="background-color: navy; border-color: yellow; border-width: 3;" />
+                <Panel style="background-color: darkred; border-color: white; border-width: 3; border-radius: 8;" />
+            </HBox>
+
+            <Label class="title" text="Gradients" />
+            <HBox>
+                <Panel style="background-color: linear-gradient(45deg, blue 0%, cyan 100%);" />
+                <Panel style="background-color: linear-gradient(90deg, black 0%, darkmagenta 50%, yellow 100%);" />
+                <Panel style="background-color: radial-gradient(0deg, white 50%, darkgreen 65%, white 100%); border-radius: 50;" />
+            </HBox>
+
+            <Label class="title" text="Shadow" />
+            <HBox>
+                <Panel style="background-color: olive; shadow-color: black; shadow-radius: 16;" />                
+                <Panel style="background-color: darkmagenta; shadow-color: black; shadow-radius: 16; shadow-offset-x: 8; shadow-offset-y: 8;" />
+                <Panel style="background-color: darkblue; shadow-color: yellow; shadow-radius: 16;" />
+            </HBox>
+
+        </Panel>
+    </ScrollArea>
+</View>

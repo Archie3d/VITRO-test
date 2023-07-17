@@ -1,0 +1,122 @@
+$backgroundColor: #1F1F1F;
+
+View {
+    flex-direwction: column;
+    background-color: $backgroundColor;
+    padding-left: 8;
+    padding-bottom: 8;
+}
+
+HBox {
+    flex-direction: row;
+    padding-all: 16;
+    background-color: $backgroundColor;
+}
+
+ScrollArea {
+    width: 100%;
+    height: 100%;
+    horizontal-scrollbar: false;
+}
+
+Panel.scroll {
+    width: 100%;
+    height: auto;
+    padding-right: 40;
+    background-color: $backgroundColor;
+}
+
+Label {
+    min-height: 20;
+    color: #999999;
+}
+
+Label.title {
+    color: white;
+    font-size: 18;
+    font-style: bold;
+    min-height: 24;
+    margin-top: 8;
+    margin-bottom: 4;
+}
+
+Label.underline_on_hover:hover {
+    font-style: underline;
+    cursor: pointer;
+    color: #FFFF99;
+}
+
+TextButton {
+    min-height: 20;
+    width: 100;
+    margin-all: 4;
+}
+
+TextButton:hover {
+    cursor: pointer;
+}
+
+ToggleButton {
+    margin-all: 4;
+    min-height: 20;
+    color: #CCCCCC;
+    cursor: pointer;
+}
+
+Slider {
+    margin-top: 4;
+    margin-bottom: 4;
+    text-box-color: #CCCCCC;
+}
+
+Slider.horizontal {
+    slider-style: horizontal;
+    height: 20;
+}
+
+Slider.horizontal-bar {
+    slider-style: horizontal bar;
+    height: 20;
+    track-color: darkcyan;
+}
+
+
+Slider.vertical {
+    slider-style: vertical;
+    height: 100;
+}
+
+Slider.rotary {
+    slider-style: rotary;
+    height: 100;
+    text-box-position: below;
+    text-box-border-color: none;
+}
+
+Slider.rotary: hover {
+    fill-color: darkcyan;
+    border-color: cyan;
+}
+
+Slider.colored {
+    thumb-color: magenta;
+    track-color: darkmagenta;
+    background-color: #1F001F;
+    text-box-position: none;
+}
+
+TextEditor {
+    margin-all: 4;
+    height: 24;
+}
+
+TextEditor.multiline {
+    multiline: true;
+    height: 100;
+}
+
+Panel {
+    width: 100;
+    height: 100;
+    margin-all: 16;
+}
