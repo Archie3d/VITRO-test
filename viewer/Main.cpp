@@ -5,11 +5,11 @@
 #include <JuceHeader.h>
 #include "MainComponent.h"
 
-class TestBgfxApplication : public juce::JUCEApplication
+class ViewerApplication : public juce::JUCEApplication
 {
 public:
 
-    TestBgfxApplication() {}
+    ViewerApplication() {}
 
     const juce::String getApplicationName() override       { return ProjectInfo::projectName; }
     const juce::String getApplicationVersion() override    { return ProjectInfo::versionString; }
@@ -78,4 +78,4 @@ private:
 };
 
 //==============================================================================
-START_JUCE_APPLICATION (TestBgfxApplication)
+START_JUCE_APPLICATION(ViewerApplication)
