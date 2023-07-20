@@ -12,6 +12,15 @@
             <TextButton text="Colored button" style="background-color: #1F051F;" />
             <ToggleButton text="Toggle button" toggle="true" />
 
+            <Label class="title" text="Combobox" />
+            <ComboBox noselectiontext="...">
+                <heading text="Heading" />
+                <item itemid="1" text="First" />
+                <item itemid="2" text="Second" />
+                <separator />
+                <item itemid="3" text="Third" />
+            </ComboBox>
+
             <Label class="title" text="Sliders" />
             <Slider class="horizontal" decimals="2" />
             <Slider class="horizontal colored" />
@@ -38,7 +47,7 @@
 
             <Label class="title" text="Shadow" />
             <HBox>
-                <Panel style="background-color: olive; shadow-color: black; shadow-radius: 16;" />                
+                <Panel style="background-color: olive; shadow-color: black; shadow-radius: 16;" />
                 <Panel style="background-color: darkmagenta; shadow-color: black; shadow-radius: 16; shadow-offset-x: 8; shadow-offset-y: 8;" />
                 <Panel style="background-color: darkblue; shadow-color: yellow; shadow-radius: 16;" />
             </HBox>

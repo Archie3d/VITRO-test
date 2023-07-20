@@ -63,6 +63,15 @@ ToggleButton {
     cursor: pointer;
 }
 
+ComboBox {
+    margin-all: 4;
+    height: 24;
+    width: 120;
+    text-color: #CCCCCC;
+    highlight-text-color: #FFCC99;
+    highlight-color: #336699;
+}
+
 Slider {
     margin-top: 4;
     margin-bottom: 4;
