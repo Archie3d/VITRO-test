@@ -4,19 +4,11 @@ import { React } from './react.js'
 // JSX syntax expects Capitalized tags to be functions, so we need to
 // add a tralslation for those to the UI elements.
 const Label = (props) => {
-    return {
-        type: "Label",
-        attributes: props,
-        children: []
-    };
+    return React.createElement("Label", props);
 };
 
 const Panel = (props) => {
-    return {
-        type: "Panel",
-        attributes: props,
-        children: []
-    };
+    return React.createElement("Panel", props);
 };
 
 //----------------------------------------------------------
