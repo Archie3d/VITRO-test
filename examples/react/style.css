@@ -5,21 +5,61 @@ View {
     padding-all: 6;
 }
 
-Label {
+Label.row {
+    flex-grow: 1;
     color: black;
     min-height: 24;
+    background-color: lightgrey;
 }
 
-Label:hover {
+Label.row:hover {
     cursor: pointer;
     background-color: #F0F0F0;
 }
 
-Panel {
+TextEditor {
+    height: 26;
+    margin-right: 12;
+    flex-grow: 1;
+    background-color: lightgrey;
+    text-color: black;
+}
+
+TextButton {
+    width: 80;
+    height: 26;
+}
+
+TextButton.delete {
+    width: 26;
+    height: 26;
+}
+
+ScrollArea {
+    position: absolute;
+    top: 38;
+    bottom: 6;
+    left: 6;
+    right: 6;
+    vertical-scrollbar: true;
+    horizontal-scrollbar: false;
+}
+
+Panel.input {
+    flex-direction: row;
+    height: 38;
+    padding-bottom: 12;
+}
+
+Panel.row {
+    flex-direction: row;
+    height: 28;
+}
+
+Panel.scroll {
     width: 100%;
     height: auto;
     padding-all: 2;
-    border-color:grey;
-    border-width: 1;
     background-color: lightgrey;
 }
+
