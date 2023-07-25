@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.20)
 project(juce-vitro VERSION 1.0.0)
 
 set(CMAKE_CXX_STANDARD 20)
+cmake_policy(SET CMP0135 OLD)
 
 include(FetchContent)
 FetchContent_Declare(
