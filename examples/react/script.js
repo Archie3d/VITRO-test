@@ -7,6 +7,7 @@ const Label = (props) => { return React.createElement("Label", props); };
 const Panel = (props) => { return React.createElement("Panel", props); };
 const TextEditor = (prop) => { return React.createElement("TextEditor", prop); }
 const TextButton = (prop) => { return React.createElement("TextButton", prop); }
+const ScrollArea = (prop) => { return React.createElement("ScrollArea", prop); }
 
 //----------------------------------------------------------
 // Components
@@ -53,13 +54,15 @@ const Table = (props) => {
     }
 
     return (
-        <Panel class="scroll">
-            {props.items.map((item, idx) => {
-                return (
-                    <Row text={item} onDelete={() => {deleteRow(idx)}}/>
-                )
-            })}
-        </Panel>
+        <ScrollArea>
+            <Panel class="scroll">
+                {props.items.map((item, idx) => {
+                    return (
+                        <Row text={item} onDelete={() => {deleteRow(idx)}}/>
+                    )
+                })}
+            </Panel>
+        </ScrollArea>
     )
 }
 
@@ -68,6 +71,7 @@ const Table = (props) => {
 
 var items = ["First", "Second", "Third", "Fourth", "Fifth"];
 
+//var items = [];
 
 //----------------------------------------------------------
 // Top-level application component.
@@ -105,5 +109,4 @@ const App = () => {
 globalThis.render = () => {
     var app = App();
     React.reconcileChildren(app, view);
-    view.refresh();
 }

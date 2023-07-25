@@ -64,7 +64,7 @@ export class React {
             reconciledChildren.push(reconciledElement);
 
             // Run reconciliation recursively
-            if (child.children !== 'undefined' && child.children.length > 0) {
+            if (child.children !== 'undefined') {
                 React.reconcileChildren(child, reconciledElement);
             }
         });

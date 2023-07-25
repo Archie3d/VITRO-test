@@ -41,6 +41,7 @@ ScrollArea {
     bottom: 6;
     left: 6;
     right: 6;
+    padding-right: 10;
     vertical-scrollbar: true;
     horizontal-scrollbar: false;
 }
