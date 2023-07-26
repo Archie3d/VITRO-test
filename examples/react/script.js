@@ -2,7 +2,7 @@ import { React } from './react.js'
 
 //----------------------------------------------------------
 // JSX syntax expects Capitalized tags to be functions, so we need to
-// add a tralslation for those to the UI elements.
+// add a tralslation for the native UI element tags.
 const Label = (props) => { return React.createElement("Label", props); };
 const Panel = (props) => { return React.createElement("Panel", props); };
 const TextEditor = (prop) => { return React.createElement("TextEditor", prop); }

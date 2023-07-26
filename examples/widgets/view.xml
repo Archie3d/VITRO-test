@@ -31,6 +31,9 @@
             <TextEditor text="Single line text editor" />
             <TextEditor class="multiline" text="Multiline text editor" />
 
+            <Label class="title" text="Code Editor" />
+            <CodeEditor syntax="cpp" text="auto int = [](auto x) { return x + 1; };" />
+
             <Label class="title" text="Panel" />
             <HBox>
                 <Panel style="background-color: green;" />

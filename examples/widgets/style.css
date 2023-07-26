@@ -125,6 +125,13 @@ TextEditor.multiline {
     height: 100;
 }
 
+CodeEditor {
+    margin-all: 4;
+    height: 120;
+    background-color: white;
+    line-number-color: #0F0F0F;
+}
+
 Panel {
     width: 100;
     height: 100;
