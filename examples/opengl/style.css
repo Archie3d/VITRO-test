@@ -1,0 +1,14 @@
+View {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+OpenGLView {
+    flex-grow: 1;
+}
+
+Label {
+    height: 24;
+    color: orange;
+}

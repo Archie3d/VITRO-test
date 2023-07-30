@@ -4,6 +4,7 @@ This repository contains unit tests and exampe projects for [VITRO](https://gith
 ## Projects
 - [Viewer](https://github.com/Archie3d/VITRO-test/tree/master/viewer) loads the UI from `view.xml`, `style.css`, and `script.js` in the working directory, and displays it. `Ctrl-R` refreshes the UI.
 
-### UI Examples
+### Examples
 - [Widgets](https://github.com/Archie3d/VITRO-test/tree/master/examples/widgets) contains the UI layout with all the currently supported widgets.
-- [React](https://github.com/Archie3d/VITRO-test/tree/master/examples/react) React-like UI wiht JavaScript.
+- [React](https://github.com/Archie3d/VITRO-test/tree/master/examples/react) React-like UI with JavaScript.
+- [OpenGL](https://github.com/Archie3d/VITRO-test/tree/master/examples/opengl) OpenGL fragment shader rendering.

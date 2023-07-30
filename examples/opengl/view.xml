@@ -1,0 +1,8 @@
+<View>
+    <OpenGLView fps="30">
+        <shader src="shader.glsl" />
+
+        <Label text="Background rendered by a fragment shader" />
+    </OpenGLView>
+</View>
+
