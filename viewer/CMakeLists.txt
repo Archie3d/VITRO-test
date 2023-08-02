@@ -14,6 +14,7 @@ target_link_libraries(${TARGET}
         juce::juce_audio_plugin_client
         juce::juce_gui_basics
         juce::juce_gui_extra
+        juce::juce_opengl
 
         juce::vitro
     PUBLIC
