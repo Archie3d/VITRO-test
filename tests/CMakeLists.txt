@@ -3,9 +3,9 @@ set(TARGET vitro-tests)
 enable_testing()
 
 juce_add_console_app(${TARGET}
-    PRODUCT_NAME "VITRO-Tests"
+    PRODUCT_NAME "vitro_tests"
     VERSION      "1.0.0"
-    COMPANY_NAME "Arthur Benilov"
+    COMPANY_NAME "Archie3D"
 )
 
 target_link_libraries(${TARGET}

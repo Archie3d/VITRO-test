@@ -3,6 +3,7 @@ set(TARGET "viewer")
 juce_add_gui_app(${TARGET}
     PRODUCT_NAME "vitro_viewer"
     VERSION "1.0.0"
+    COMPANY_NAME "Archie3D"
 )
 
 target_link_libraries(${TARGET}
