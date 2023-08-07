@@ -10,6 +10,7 @@
             <TextButton text="Text button" />
             <TextButton text="Disabled button" enabled="false" />
             <TextButton text="Colored button" style="background-color: #1F051F;" />
+            <TextButton text="Gradient button" class="gradient" />
             <ToggleButton text="Toggle button" toggle="true" />
 
             <Label class="title" text="Combobox" />

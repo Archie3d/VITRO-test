@@ -47,9 +47,26 @@ Label.underline_on_hover:hover {
 }
 
 TextButton {
-    min-height: 20;
-    width: 100;
+    min-height: 24;
+    width: 120;
     margin-all: 4;
+}
+
+TextButton.gradient {
+    height: 26;
+    border-radius: 13;
+    text-color-off: white;
+    background-color: linear-gradient(180deg, #336633 0%, #006600 50%, #000000 100%);
+}
+
+TextButton.gradient:hover {
+    text-color-off: yellow;
+    background-color: linear-gradient(180deg, #339933 0%, #009900 50%, #111111 100%);
+}
+
+TextButton.gradient:active {
+    text-color-off: yellow;
+    background-color: linear-gradient(180deg, #999933 0%, #999900 50%, #111111 100%);
 }
 
 TextButton:hover {
