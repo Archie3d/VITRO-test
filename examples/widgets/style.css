@@ -137,6 +137,10 @@ TextEditor {
     height: 24;
 }
 
+TextEditor.rounded {
+    border-radius: 10;
+}
+
 TextEditor.multiline {
     multiline: true;
     height: 100;

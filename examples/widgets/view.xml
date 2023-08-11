@@ -30,6 +30,7 @@
 
             <Label class="title" text="Text Editor" />
             <TextEditor text="Single line text editor" />
+            <TextEditor class="rounded" text="Single line text editor with rounded corners" />
             <TextEditor class="multiline" text="Multiline text editor" />
 
             <Label class="title" text="Code Editor" />
