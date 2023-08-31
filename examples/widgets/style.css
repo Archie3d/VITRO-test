@@ -158,3 +158,8 @@ Panel {
     height: 100;
     margin-all: 16;
 }
+
+MidiKeyboard {
+    width: 80%;
+    height: 80;
+}

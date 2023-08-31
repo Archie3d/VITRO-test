@@ -15,9 +15,9 @@ public:
     const juce::String getApplicationVersion() override    { return ProjectInfo::versionString; }
     bool moreThanOneInstanceAllowed() override             { return true; }
 
-    void initialise (const juce::String& commandLine) override
+    void initialise(const juce::String& commandLine) override
     {
-        mainWindow.reset (new MainWindow (getApplicationName()));
+        mainWindow.reset(new MainWindow (getApplicationName()));
     }
 
     void shutdown() override
@@ -30,7 +30,7 @@ public:
         quit();
     }
 
-    void anotherInstanceStarted (const juce::String& commandLine) override
+    void anotherInstanceStarted(const juce::String& commandLine) override
     {
         // When another instance of the app is launched while this one is running,
         // this method is invoked, and the commandLine parameter tells you what
@@ -48,17 +48,17 @@ public:
         MainWindow (juce::String name)
             : DocumentWindow (name,
                               juce::Desktop::getInstance().getDefaultLookAndFeel()
-                                                          .findColour (juce::ResizableWindow::backgroundColourId),
+                                                          .findColour(juce::ResizableWindow::backgroundColourId),
                               DocumentWindow::allButtons)
         {
-            setUsingNativeTitleBar (true);
-            setContentOwned (new MainComponent(), true);
+            setUsingNativeTitleBar(true);
+            setContentOwned(new MainComponent(), true);
 
            #if JUCE_IOS || JUCE_ANDROID
-            setFullScreen (true);
+            setFullScreen(true);
            #else
-            setResizable (true, true);
-            centreWithSize (getWidth(), getHeight());
+            setResizable(true, true);
+            centreWithSize(getWidth(), getHeight());
            #endif
 
             setVisible (true);
@@ -70,7 +70,7 @@ public:
         }
 
     private:
-        JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainWindow)
+        JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(MainWindow)
     };
 
 private:

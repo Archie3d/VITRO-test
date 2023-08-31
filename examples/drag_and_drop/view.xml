@@ -1,0 +1,23 @@
+<View>
+
+    <Label text="Draggable label" draggable="true" />
+
+    <Label text="Drop target label" acceptdrop="true" id="drop_target" />
+
+    <script>
+        var dropTarget = view.getElementById('drop_target');
+
+        dropTarget.setAttribute('onacceptdrop', function(e) {
+            console.log("onacceptdrop " + e.tagName);
+            dropTarget.style = "border-color: yellow;";
+            return true;
+        });
+
+        dropTarget.setAttribute('ondrop', function(e) {
+            console.log("Dropped element " + e.tagName + ": " + e.getAttribute('text'));
+            dropTarget.style = "";
+        });
+    </script>
+
+</View>
+

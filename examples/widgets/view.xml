@@ -57,6 +57,9 @@
                 <Panel style="background-color: darkblue; shadow-color: yellow; shadow-radius: 16;" />
             </HBox>
 
+            <Label class="title" text="MIDI Keyboard" />
+            <MidiKeyboard />
+
         </Panel>
     </ScrollArea>
 </View>
