@@ -26,6 +26,8 @@ juce_generate_juce_header(${TARGET})
 
 set(src
     ${CMAKE_CURRENT_SOURCE_DIR}/Main.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/FilesWatcher.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/FilesWatcher.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/MainComponent.h
     ${CMAKE_CURRENT_SOURCE_DIR}/MainComponent.cpp
 )
