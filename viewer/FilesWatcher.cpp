@@ -66,11 +66,10 @@ void FilesWatcher::removeListener(Listener* listener)
 void FilesWatcher::run()
 {
     while (!threadShouldExit()) {
-        if (checkAnyFileChanged()) {
+        if (checkAnyFileChanged())
             triggerAsyncUpdate();
 
-            wait(watchPeriodMs);
-        }
+        wait(watchPeriodMs);
     }
 }
 
