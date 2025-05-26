@@ -33,8 +33,3 @@ set(src
 )
 
 target_sources(${TARGET} PRIVATE ${src})
-
-target_compile_definitions(${TARGET}
-    PUBLIC
-        JUCE_DISPLAY_SPLASH_SCREEN=0
-)
